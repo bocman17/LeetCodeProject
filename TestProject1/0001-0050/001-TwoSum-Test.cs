@@ -96,5 +96,35 @@ namespace LeetCode.Test._0001_0050
 
             Assert.That(result, Has.Length.EqualTo(0));
         }
+
+        [Test]
+        [Timeout(50)]
+        public void TwoSumTest_LargeArray()
+        {
+            var target = 19082;
+
+            var solution = new _001_TwoSum();
+            var result = solution.TwoSum(largeArray, target);
+
+            Assert.That(result, Has.Length.EqualTo(2));
+
+            Assert.Multiple(() =>
+            {
+                Assert.That(result[0], Is.EqualTo(4770));
+                Assert.That(result[1], Is.EqualTo(4771));
+            });
+        }
+
+        [Test]
+        [Timeout(50)]
+        public void TwoSumTest_LargeArray_NoTarget()
+        {
+            var target = 19081;
+
+            var solution = new _001_TwoSum();
+            var result = solution.TwoSum(largeArray, target);
+
+            Assert.That(result, Has.Length.EqualTo(0));
+        }
     }
 }

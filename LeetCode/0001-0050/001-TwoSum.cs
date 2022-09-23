@@ -22,7 +22,7 @@ namespace LeetCode._0001_0050
                 {
                     dic[target - nums[i]] = i;
                 }
-            }
+            }   
 
             return new int[] { };
         }
