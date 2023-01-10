@@ -72,24 +72,24 @@ namespace LeetCode.Test
 
         public static void AssertList<T>(T[] expected, IList<T> actual)
         {
-            Assert.That(expected, Has.Length.EqualTo(actual.Count), message: "length is not a match");
+            Assert.That(actual.Count, Is.EqualTo(expected.Length), message: "length is not a match");
 
             for (int i = 0; i < expected.Length; i++)
             {
-                Assert.That(expected[i], Is.EqualTo(actual[i]), message: $"i {i} is not a match");
+                Assert.That(actual[i], Is.EqualTo(expected[i]), message: $"i {i} is not a match");
             }
         }
 
         public static void AssertList<T>(IList<IList<T>> expected, IList<IList<T>> actual)
         {
-            Assert.That(expected, Has.Count.EqualTo(actual), message: "length is not a match");
+            Assert.That(actual.Count, Is.EqualTo(expected.Count), message: "length is not a match");
 
             for (int i = 0; i < expected.Count; i++)
             {
-                Assert.That(expected[i], Has.Count.EqualTo(actual[i]), message: $"row {i} length is not a match");
+                Assert.That(actual[i].Count, Is.EqualTo(expected[i].Count), message: $"row {i} length is not a match");
                 for (int j = 0; j < expected[i].Count; j++)
                 {
-                    Assert.That(expected[i][j], Is.EqualTo(actual[i][j]), message: $"i {i}, j {j} length is not a match");
+                    Assert.That(actual[i][j], Is.EqualTo(expected[i][j]), message: $"i {i}, j {j} length is not a match");
                 }
             }
         }
