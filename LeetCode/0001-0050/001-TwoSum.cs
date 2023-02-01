@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LeetCode._0001_0050
 {
-    public class _001_TwoSum // comment
+    public class _001_TwoSum
     {
         public int[] TwoSum(int[] nums, int target)
         {   
