@@ -8,7 +8,7 @@ namespace LeetCode._0001_0050
 {
     public class _030_SubstringWithConcatenationOfAllWords
     {
-        public IList<int> FindSubstring(string s, string[] words)
+        public IList<int> FindSubstring(string s, string[] words) // test
         {
             List<int> result = new();
             if(words.Length == 0) { return result; }
